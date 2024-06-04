@@ -96,3 +96,13 @@ tr:nth-child(even) {
 tr:hover {
     background-color: #ddd; /* Color de fondo al pasar el ratón sobre una fila */
 }
+
+.practica {
+    color: white; /* Cambia el color del texto */
+    background-color: #007BFF; /* Cambia el color de fondo */
+    font-weight: bold; /* Hace el texto en negrita */
+    padding: 10px 20px; /* Añade relleno alrededor del enlace */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    border-radius: 5px; /* Redondea las esquinas */
+    transition: background-color 0.3s ease; /* Añade una transición suave al fondo */
+}

@@ -1,79 +1,35 @@
-function CalcularSuma(){
-    var val1 = parseFloat(document.getElementById("v1").value);
-    var val2 = parseFloat(document.getElementById("v2").value);
-    var x = 0;
-    var res = document.getElementById("res");
+let resultadoAnterior = null;
 
-    if (isNaN(val1) || isNaN(val2)) {
-        res.innerHTML = "Datos nulos o incorrectos";
-        if (isNaN(val1)) {
-            document.getElementById("v1").focus();
-        } else {
-            document.getElementById("v2").focus();
-        }
-        return;
+function calcular(operation) {
+    let v1 = parseFloat(document.getElementById('v1').value);
+    let v2 = parseFloat(document.getElementById('v2').value);
+    let resultado;
+
+    if (resultadoAnterior !== null) {
+        v1 = resultadoAnterior;
     }
-    x = val1 + val2;
 
-    res.innerHTML = x;
-}
-
-function CalcularResta(){
-    var val1 = parseFloat(document.getElementById("v1").value);
-    var val2 = parseFloat(document.getElementById("v2").value);
-    var x = 0;
-    var res = document.getElementById("res");
-
-    if (isNaN(val1) || isNaN(val2)) {
-        res.innerHTML = "Datos nulos o incorrectos";
-        if (isNaN(val1)) {
-            document.getElementById("v1").focus();
-        } else {
-            document.getElementById("v2").focus();
-        }
-        return;
+    switch (operation) {
+        case 'suma':
+            resultado = v1 + v2;
+            break;
+        case 'resta':
+            resultado = v1 - v2;
+            break;
+        case 'multiplicacion':
+            resultado = v1 * v2;
+            break;
+        case 'division':
+            if (v2 === 0) {
+                document.getElementById('res').innerText = "Error: División por 0";
+                return;
+            }
+            resultado = v1 / v2;
+            break;
+        default:
+            return;
     }
-    x = val1 - val2;
 
-    res.innerHTML = x;
-}
-
-function CalcularDivision(){
-    var val1 = parseFloat(document.getElementById("v1").value);
-    var val2 = parseFloat(document.getElementById("v2").value);
-    var x = 0;
-    var res = document.getElementById("res");
-
-    if (isNaN(val1) || isNaN(val2)) {
-        res.innerHTML = "Datos nulos o incorrectos";
-        if (isNaN(val1)) {
-            document.getElementById("v1").focus();
-        } else {
-            document.getElementById("v2").focus();
-        }
-        return;
-    }
-    x = val1 / val2;
-
-    res.innerHTML = x;
-}
-
-function CalcularMultiplicacion(){
-    var val1 = parseFloat(document.getElementById("v1").value);
-    var val2 = parseFloat(document.getElementById("v2").value);
-    var x = 0;
-    var res = document.getElementById("res");
-
-    if (isNaN(val1) || isNaN(val2)) {
-        res.innerHTML = "Datos nulos o incorrectos";
-        if (isNaN(val1)) {
-            document.getElementById("v1").focus();
-        } else {
-            document.getElementById("v2").focus();
-        }
-        return;
-    }
-    x = val1 * val2;
-
-    res.innerHTML = x;
+    resultadoAnterior = resultado;
+    document.getElementById('res').innerText = resultado;
 }

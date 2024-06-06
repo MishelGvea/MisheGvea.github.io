@@ -10,13 +10,13 @@
     <div class="container">
         <h1 id="title">Calculadora...</h1>
         <h3 class="subtitle">Captura el valor 1</h3>
-        <input class="imput" type="number" id="v1">
+        <input class="input" type="number" id="v1">
         <h3 class="subtitle">Captura el valor 2</h3>
-        <input class="imput" type="number" id="v2">
-        <button class="Button" onclick="CalcularSuma()">Suma</button>
-        <button class="Button" onclick="CalcularResta()">Resta</button>
-        <button class="Button" onclick="CalcularMultiplicacion()">Multiplicación</button>
-        <button class="Button" onclick="CalcularDivision()">División</button>
+        <input class="input" type="number" id="v2">
+        <button class="Button" onclick="calcular('suma')">Suma</button>
+        <button class="Button" onclick="calcular('resta')">Resta</button>
+        <button class="Button" onclick="calcular('multiplicacion')">Multiplicación</button>
+        <button class="Button" onclick="calcular('division')">División</button>
         <h3 class="subtitle">Resultado</h3>
         <h3 class="subtitle" id="res">....</h3>
     </div>

@@ -5,28 +5,28 @@
     justify-content: center;
     height: 100vh;
     background-color: #007c91;
-    color: #fff;
-    padding: 10px;
+    color: hsl(0, 0%, 100%);
+    padding: 5vw;
     border-radius: 5px;
 }
 
 .title{
-    font-size: 50px;
-    margin-bottom: 20px;
+    font-size: 4em;
+    margin-bottom: .05em;
     text-align: center;
     font-weight: bold;
 }
 
 .subtitle{
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 2em;
+    margin-bottom: 0.05em;
     text-align: center;
 }
 
 .input {
-    width: 90%;
-    padding: 10px;
-    margin: 15px;
+    width: 95%;
+    padding: 1.5%;
+    margin: 2%;
     border-width: 2px;
     border-radius: 7px;
     border-color: #cccccc;
@@ -44,4 +44,11 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+}
+
+
+@media(max-width:760px){
+    .container{
+        background-color: black;
+    }
 }
